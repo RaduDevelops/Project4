@@ -6,7 +6,7 @@
     font-weight: 400;
 }
 body{
-    background: linear-gradient(90deg,#448aff,#b71c1c);
+    background: linear-gradient(90deg,#004fd6,#b71c1c,#004fd6);
     z-index: -1;
 }
 .p-container{
@@ -14,15 +14,99 @@ body{
     text-align: center;
     position: relative;
     height: 1020px;
-    width:50%;
+    width:80%;
+    max-width: 900px;
     top:100px;
     left: 50%;
     border-radius: 20px;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255,0.1);
+    display: flex;
+    flex-direction: column;
 }
 .title h1{
     font-weight: 700;
     color:rgb(8, 6, 6);
     margin-bottom: 50px;
 }
+.intro-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+input{
+    width:70%;
+    height:45px;
+    font-size: 16px;
+    padding-left: 20px;
+    border-radius: 20px;
+    border: none;
+}
+.intro-data button{
+    width: 90px;
+    height: 45px;
+    background: linear-gradient(90deg,#02ad11,#149e1b);
+    border-radius: 20px;
+    border: none;
+    cursor:pointer;
+    font-size: 18px;
+    font-weight:700;
+    color:rgb(255, 255, 255);
+}
+.task{
+    height:40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+    margin-top: 25px;
+    padding: 5px;
+}
+.text{
+    width:70%;
+    display: flex;
+    align-items: center;
+    border:1px solid white;
+    height: 40px;
+    border-radius: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    color:white;
+    font-size: 25px;
+    opacity: 0.95;
+}
+.check-btn{
+    background-color: transparent;
+    border: none;
+}
+.check-btn svg{
+    width:auto;
+    height:40px;
+    fill:grey;
+    cursor:pointer;
+    margin-right: -40px;
+}
+.remove-btn{
+    background-color: transparent;
+    border: none;
+}
+.remove-btn svg{
+    width:auto;
+    height:40px;
+    fill:rgb(243, 61, 61);
+    cursor:pointer;
+    margin-left: -40px;
+}
+@media only screen and (max-width:800px){
+    .p-container{
+        width: 90%;
+    }
+    .check-btn svg{
+        margin-right:0;
+    }
+    .remove-btn svg{
+        margin-left: 0;
+    }
+} 
