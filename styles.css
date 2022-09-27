@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: Dosis,sans-serif;
+    font-weight: 400;
+}
+body{
+    background: linear-gradient(90deg,#448aff,#b71c1c);
+    z-index: -1;
+}
+.p-container{
+    padding:50px;
+    text-align: center;
+    position: relative;
+    height: 1020px;
+    width:50%;
+    top:100px;
+    left: 50%;
+    border-radius: 20px;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255,0.1);
+}
+.title h1{
+    font-weight: 700;
+    color:rgb(8, 6, 6);
+    margin-bottom: 50px;
+}
