@@ -11,9 +11,10 @@ body{
 }
 .p-container{
     padding:50px;
+    padding-bottom: 150px;
     text-align: center;
     position: relative;
-    height: 1020px;
+    height: auto;
     width:80%;
     max-width: 900px;
     top:100px;
@@ -63,7 +64,7 @@ input{
     margin-top: 25px;
     padding: 5px;
 }
-.text{
+.unchecked{
     width:70%;
     display: flex;
     align-items: center;
@@ -77,14 +78,40 @@ input{
     font-size: 25px;
     opacity: 0.95;
 }
-.check-btn{
+.checked{
+    width:70%;
+    display: flex;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 500;
+    color:white;
+    font-size: 25px;
+    background-color: #149e1b;
+    opacity: 0.7;
+}
+.inactive{
     background-color: transparent;
     border: none;
 }
-.check-btn svg{
+.inactive svg{
     width:auto;
     height:40px;
     fill:grey;
+    cursor:pointer;
+    margin-right: -40px;
+}
+.active{
+    background-color: transparent;
+    border: none;
+}
+.active svg{
+    width:auto;
+    height:40px;
+    fill:#02ad11;
     cursor:pointer;
     margin-right: -40px;
 }
@@ -99,6 +126,7 @@ input{
     cursor:pointer;
     margin-left: -40px;
 }
+
 @media only screen and (max-width:800px){
     .p-container{
         width: 90%;
