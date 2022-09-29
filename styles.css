@@ -9,6 +9,24 @@ body{
     background: linear-gradient(90deg,#004fd6,#b71c1c,#004fd6);
     z-index: -1;
 }
+
+.fa-solid{
+   cursor: pointer;
+   width: auto;
+   height: auto;
+   border: none;
+   border-radius: 50%;
+   padding: 10px;
+   font-size: 35px;
+   background-color: transparent;
+   
+}
+.fa-check:hover{
+    background-color: hsl(123, 39%, 55%);
+}
+.fa-trash:hover{
+    background-color: hsl(357, 45%, 51%);
+}
 .p-container{
     padding:50px;
     padding-bottom: 150px;
@@ -91,40 +109,20 @@ input{
     color:white;
     font-size: 25px;
     background-color: #149e1b;
-    opacity: 0.7;
+    opacity: 0.6;
+    text-decoration: line-through;
 }
 .inactive{
     background-color: transparent;
     border: none;
 }
-.inactive svg{
-    width:auto;
-    height:40px;
-    fill:grey;
-    cursor:pointer;
-    margin-right: -40px;
-}
 .active{
     background-color: transparent;
     border: none;
 }
-.active svg{
-    width:auto;
-    height:40px;
-    fill:#02ad11;
-    cursor:pointer;
-    margin-right: -40px;
-}
 .remove-btn{
     background-color: transparent;
     border: none;
-}
-.remove-btn svg{
-    width:auto;
-    height:40px;
-    fill:rgb(243, 61, 61);
-    cursor:pointer;
-    margin-left: -40px;
 }
 
 @media only screen and (max-width:800px){
@@ -137,4 +135,22 @@ input{
     .remove-btn svg{
         margin-left: 0;
     }
+}
+@media only screen and (max-width:630px){
+    .intro-data{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    input{
+        width:90%
+    }
+    .intro-data button{
+        width: 90%;
+    }
+    .task{
+        gap:8px;
+    }
+   
+    
 }
