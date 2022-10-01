@@ -33,8 +33,8 @@ function adding(){
     };
 
 
-// The function that removes a task
-    function deleteTask(e){
+// The function that removes a task or changes the the task's state in "checked/unchecked"
+    function deleteCheckTask(e){
       const item = e.target;
      if(item.classList[1] === "fa-trash"){
       const todo= item.parentElement.parentElement;
@@ -42,6 +42,16 @@ function adding(){
       }
       //  REMAIN HERE !!!!
       if(item.classList[1] === "fa-check"){
+        const todo = item.parentElement.parentElement;
+        const children = Array.from(todo.children);
+        let changer = children[0];
+        if(changer.classList.contains("unchecked")){
+          changer.classList.remove("unchecked");
+          changer.classList.add("checked");
+        } else{
+          changer.classList.remove("checked");
+          changer.classList.add("unchecked");
+        }
       }
     }
 
@@ -58,15 +68,6 @@ adder.addEventListener("click",(e)=>{
   }
 });
 
-taskContainer.addEventListener("click", deleteTask)
-
-
-
-
-
-/* Linking the delete function to the "remove" button button
- removeButton.addEventListener("click",(e)=>{
-  e.preventDefault();
-  deleteTask();
- }) */
+// Linking the deleteCheckTask function to the "Remove"/"Checked" buttons
+taskContainer.addEventListener("click", deleteCheckTask)
 
